@@ -1,0 +1,422 @@
+<!doctype html>
+<html class="no-js" lang="es-419">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Fechac</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="manifest" href="site.webmanifest">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<!-- Place favicon.ico in the root directory -->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</head>
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <style>
+    :root {
+      --fechac: #a8334e;
+      --text: #636363;
+      --grey: #f6eff6;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+    a:hover {
+      color: var(--fechac) !important;
+    }
+    body {
+      color: var(--text);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: var(--fechac);
+      text-align: center;
+    }
+
+    .contentBody {
+      min-height: calc(100vh - 291.6px);
+    }
+
+    footer {
+      background: var(--grey);
+    }
+
+    input {
+      width: 100%;
+    }
+
+    .logoSponsor {
+      background: url(http://www.fechac.org/web/img/s_sponsors1.jpg) no-repeat;
+      display: block;
+      filter: grayscale(1);
+      height: 75px;
+      transition: filter .3s ease-in-out;
+      width: 168px;
+    }
+    .logoSponsor:hover {
+      filter: grayscale(0);
+    }
+
+    .sponsor:not(.load) .owl-carousel {
+      font-size: 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .sponsor:not(.load) .item {
+      display: inline-block;
+      font-size: 16px;
+      vertical-align: middle;
+    }
+
+    .mosaic .row:nth-child(odd) {
+      background: linear-gradient(to bottom, #a7344e 0%,#a2659e 100%);
+    }
+
+    .mosaic .row:nth-child(even) {
+      background: linear-gradient(to bottom, #cdcfce 0%,#ffffff 100%);
+    }
+
+    .logoSponsor.usaid {
+      background-position: 0 0;
+    }
+    .logoSponsor.municipiochihuahua {
+      background-position: 0 -75px;
+    }
+    .logoSponsor.arcacontal {
+      background-position: 0 -150px;
+    }
+    .logoSponsor.projectpaz {
+      background-position: 0 -225px;
+    }
+    .logoSponsor.metlife {
+      background-position: 0 -300px;
+    }
+    .logoSponsor.banamex {
+      background-position: 0 -375px;
+    }
+    .logoSponsor.congresochihuahua {
+      background-position: 0 -450px;
+    }
+    .logoSponsor.bancomer {
+      background-position: 0 -525px;
+    }
+    .logoSponsor.delicias {
+      background-position: 0 -600px;
+    }
+    .logoSponsor.gcc {
+      background-position: 0 -675px;
+    }
+    .logoSponsor.bafar {
+      background-position: 0 -750px;
+    }
+    .logoSponsor.gmodelo {
+      background-position: 0 -825px;
+    }
+    .logoSponsor.chihuahua {
+      background-position: 0 -900px;
+    }
+    .logoSponsor.fundacionrcf {
+      background-position: 0 -975px;
+    }
+    .logoSponsor.christensenfund {
+      background-position: 0 -1050px;
+    }
+    .logoSponsor.iyfnet {
+      background-position: 0 -1125px;
+    }
+    .logoSponsor.interceramic {
+      background-position: 0 -1200px;
+    }
+    .logoSponsor.consejo {
+      background-position: 0 -1275px;
+    }
+    .logoSponsor.camargochihuahua {
+      background-position: 0 -1350px;
+    }
+    .logoSponsor.oneworldfutbol {
+      background-position: 0 -1425px;
+    }
+    .logoSponsor.hidalgodelparral {
+      background-position: 0 -1500px;
+    }
+    .logoSponsor.cemefi {
+      background-position: 0 -1575px;
+    }
+    .logoSponsor.comunalia {
+      background-position: 0 -1650px;
+    }
+    .logoSponsor.redeamerica {
+      background-position: 0 -1725px;
+    }
+    .logoSponsor.icfdn {
+      background-position: 0 -1800px;
+    }
+
+    @media (min-width: 575.98px) {
+      .mosaic .row:nth-child(odd) {
+        flex-direction: row-reverse;
+      }
+    }
+
+    .mosaic > .row > div {
+      padding: 0;
+    }
+  </style>
+
+  <section class="contentBody">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2>Tienes el poder de cambiar vidas.</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad labore assumenda sunt ullam natus temporibus adipisci similique quisquam error necessitatibus obcaecati, repudiandae dolore quae tenetur laborum, quibusdam veniam voluptas laudantium?</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad labore assumenda sunt ullam natus temporibus adipisci similique quisquam error necessitatibus obcaecati, repudiandae dolore quae tenetur laborum, quibusdam veniam voluptas laudantium?</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="container">
+      <div class="sectionApoyo row">
+        <div class="col-sm-12">
+          <h2>FECHAC en números</h2>
+        </div>
+        <div class="col-sm-12 col-lg-4">
+          <p>4,200</p>
+          <p>Proyectos apoyados</p>
+        </div>
+        <div class="col-sm-12 col-lg-4">
+          <p>2,000 MILLONES</p>
+          <p>De pesos invertidos en todo el estado.</p>
+        </div>
+        <div class="col-sm-12 col-lg-4">
+          <p>4,200</p>
+          <p>Personas han mejorado su condición de vida</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sectionApoyo row">
+      <div class="col-sm-12 col-lg-6">
+        <h2>Solicita apoyo</h2>
+        <h3>Todos necesitamos de alguien, presenta tu proyecto.</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quis veritatis quas, optio eaque assumenda aut laboriosam dicta provident nulla molestiae officia dolore, ut, tenetur iure atque alias, libero rerum!</p>
+        <a href="#" class="btn">Conoce más</a>
+      </div>
+      <div class="col-sm-12 col-lg-6">
+        <h2>Quiero donar</h2>
+        <h3>Tu eres de gran ayuda para cambiar vidas.</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis provident, magni quam nam nobis dignissimos iure, alias fugiat! Deleniti quas consequatur possimus modi. Eaque similique eligendi, quisquam, vel eveniet doloribus!</p>
+        <a href="#" class="btn">Dona aquí</a>
+      </div>
+    </section>
+
+    <section class="ctVideo">
+      <img id="imgPreVideo" class="prev center" src="https://picsum.photos/1024/568">
+      <button id="buttonPlay" class="button play center d-none" type="button">play</button>
+      <button id="buttonPause" class="button pause center d-none" type="button">pause</button>
+      <video id="video" class="center d-none" controls="true">
+        <source src="http://www.maquinasm.com/img/video.mp4" type="video/mp4">
+      </video>
+    </section>
+
+    <section class="mosaic">
+      <div class="row">
+        <div class="col-sm-12 col-lg-6">
+          <h3>Caso de éxito</h3>
+          <h4>Albergue infantil Delicias</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia omnis magnam quae, quas laboriosam sint et atque numquam adipisci nobis deserunt placeat, iste ullam fugiat temporibus nesciunt praesentium. Et, laborum.</p>
+          <a href="#" class="btn">Conoce más</a>
+        </div>
+        <div class="col-sm-12 col-lg-6">
+          <img src="https://picsum.photos/1024/468">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-lg-6">
+          <h3>Caso de éxito</h3>
+          <h4>Albergue infantil Delicias</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia omnis magnam quae, quas laboriosam sint et atque numquam adipisci nobis deserunt placeat, iste ullam fugiat temporibus nesciunt praesentium. Et, laborum.</p>
+          <a href="#" class="btn">Conoce más</a>
+        </div>
+        <div class="col-sm-12 col-lg-6">
+          <img src="https://picsum.photos/1024/468">
+        </div>
+      </div>
+    </section>
+
+    <section class="container sponsor">
+      <h2><strong>Nuestros aliados.</strong> Tu también puedes ser parte.</h2>
+
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <a class="logoSponsor usaid" href="http://www.usaid.gov/" title="USAID" target="_blank"></a>
+        </div>
+        <div class="item">
+          <a class="logoSponsor municipiochihuahua" href="http://www.municipiochihuahua.gob.mx" title="Ayuntamiento de Chihuahua" target="_blank"></a>
+        </div>
+        <div class="item">
+          <a class="logoSponsor arcacontal" href="http://www.arcacontal.com/" title="Embotelladoras ARCA" target="_blank"></a>
+        </div>
+        <div class="item">
+          <a class="logoSponsor projectpaz" href="http://www.projectpaz.org/" title="Project Paz" target="_blank"></a>
+        </div>
+        <div class="item">
+          <a class="logoSponsor metlife" href="http://www.metlife.com.mx/wps/portal/seguros/" title="MetLife" target="_blank"></a>
+        </div>
+        <div class="item">
+          <a class="logoSponsor banamex" href="http://www.banamex.com/es/conoce_banamex/quienes_somos/fomento_social.htm" title="Fomento Social Banamex" target="_blank"></a>
+        </div>
+        <div class="item">
+          <a class="logoSponsor congresochihuahua" href="http://www.congresochihuahua.gob.mx/" title="Congreso del Estado de Chihuahua" target="_blank"></a>
+        </div>
+        <div class="item">
+          <a class="logoSponsor bancomer" href="http://www.bancomer.com.mx/" title="BBVA Bancomer" target="_blank"></a>
+        </div>
+        <div class="item">
+          <a class="logoSponsor delicias" href="http://www.delicias.gob.mx/" title="Ayuntamiento de Delicias" target="_blank"></a>
+        </div>
+        <div class="item">
+          <a class="logoSponsor gcc" href="http://www.gcc.com/" title="Grupo Cementos de Chihuahua" target="_blank"></a>
+        </div>
+        <div class="item">
+          <a class="logoSponsor bafar" href="http://bafar.com/espanol/responsabilidad_social.html" title="Fundación Grupo Bafar" target="_blank"></a>
+        </div>
+        <div class="item">
+          <a class="logoSponsor gmodelo" href="http://www.gmodelo.com.mx/" title="Grupo Modelo" target="_blank"></a>
+        </div>
+        <div class="item">
+          <a class="logoSponsor chihuahua" href="http://www.chihuahua.gob.mx/" title="Gobierno del Estado de Chihuahua" target="_blank"></a>
+        </div>
+        <div class="item">
+          <a class="logoSponsor fundacionrcf" href="http://fundacionrcf.org/" title="Fundación Rosario Campos de Fernández" target="_blank"></a>
+        </div>
+        <div class="item">
+          <a class="logoSponsor christensenfund" href="http://www.christensenfund.org/" title="The Christensen Fund" target="_blank"></a>
+        </div>
+        <div class="item">
+          <a class="logoSponsor iyfnet" href="http://www.iyfnet.org/country/Mexico" title="International Youth Foundation" target="_blank"></a>
+        </div>
+        <div class="item">
+          <a class="logoSponsor interceramic" href="http://www.interceramic.com/" title="Interceramic" target="_blank"></a>
+        </div>
+        <div class="item">
+          <a class="logoSponsor consejo" href="#" title="Consejo Coordinador Empresarial" target="_blank"></a>
+        </div>
+        <div class="item">
+          <a class="logoSponsor camargochihuahua" href="http://www.camargochihuahua.gob.mx/" title="Ayuntamiento de Camargo" target="_blank"></a>
+        </div>
+        <div class="item">
+          <a class="logoSponsor oneworldfutbol" href="http://www.oneworldfutbol.com/" title="One World Futbol Project" target="_blank"></a>
+        </div>
+        <div class="item">
+          <a class="logoSponsor hidalgodelparral" href="http://www.hidalgodelparral.gob.mx/" title="Ayuntamiento de Parral" target="_blank"></a>
+        </div>
+        <div class="item">
+          <a class="logoSponsor cemefi" href="http://www.cemefi.org/" title="Cemefi" target="_blank"></a>
+        </div>
+        <div class="item">
+          <a class="logoSponsor comunalia" href="http://www.comunalia.org.mx/" title="Comunalia" target="_blank"></a>
+        </div>
+        <div class="item">
+          <a class="logoSponsor redeamerica" href="http://www.redeamerica.org/" title="RedEAmérica" target="_blank"></a>
+        </div>
+        <div class="item">
+          <a class="logoSponsor icfdn" href="http://www.icfdn.org/" title="International Community Foundation" target="_blank"></a>
+        </div>
+      </div>
+    </section>
+
+  </section>
+
+  <footer>
+    <div class="container">
+      <h3>Haz contacto, junyos poodemos ayudar.</h3>
+      <div class="row">
+        <div class="col-sm-12 col-lg-8">
+          <div class="row">
+            <div class="col-sm-12 col-lg-6">
+              <div class="col-sm-12 col-lg-6">
+                <input type="text">
+              </div>
+              <div class="col-sm-12 col-lg-6">
+                <input type="text">
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg-6">
+              <div class="col-sm-12 col-lg-6">
+                <input type="text">
+              </div>
+              <div class="col-sm-12 col-lg-6">
+                <input type="text">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-4">
+          <textarea name="" id="" rows="2">test...</textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 text-right">
+          <button  class="btn btn-primary pull-right" type="button">Envíar</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-2">
+          <img src="assets/img/logo-fechac-2.png" alt="Fechac">
+        </div>
+        <div class="col-lg-6">
+          <h5>Fundación del Empresariado Chihuahuense, A.C.</h5>
+          <p>Prolongación Teófilo Borunda #10820, Col. Labor de Terrazas</p>
+          <p>Chihuahua, Chih. México. C.P. 31223</p>
+          <p>Tel. (01 614) 413-2020</p>
+        </div>
+        <div class="col-lg-3">
+          <ul>
+            <li>
+              <a href="#">Denuncia</a>
+            </li>
+            <li>
+              <a href="#">Descargas</a>
+            </li>
+            <li>
+              <a href="#">Aviso de privacidad</a>
+            </li>
+            <li>
+              <a href="#">Sugerencias</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-1">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#">Intranet</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
