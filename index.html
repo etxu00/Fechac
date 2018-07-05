@@ -13,173 +13,306 @@
 <!-- Place favicon.ico in the root directory -->
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+<style>
+  :root {
+    --fechac: #8a023c;
+    --text: #636363;
+    --grey: #f6eff6;
+    --footer: #e2f9f3;
+  }
+
+  body {
+    font-family: 'Catamaran', sans-serif;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  a {
+    color: inherit;
+  }
+  a:hover {
+    color: var(--fechac) !important;
+  }
+  body {
+    color: var(--text);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--fechac);
+    text-align: center;
+  }
+
+  .contentBody {
+    min-height: calc(100vh - 291.6px);
+  }
+
+  footer {
+    background: var(--footer);
+  }
+
+  input {
+    width: 100%;
+  }
+
+  .logoSponsor {
+    background: url(http://www.fechac.org/web/img/s_sponsors1.jpg) no-repeat;
+    display: block;
+    filter: grayscale(1);
+    height: 75px;
+    transition: filter .3s ease-in-out;
+    width: 168px;
+  }
+  .logoSponsor:hover {
+    filter: grayscale(0);
+  }
+
+  .sponsor:not(.load) .owl-carousel {
+    font-size: 0;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .sponsor:not(.load) .item {
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: middle;
+  }
+
+  .mosaic .row:nth-child(odd) {
+    background: linear-gradient(to bottom, #a7344e 0%,#a2659e 100%);
+  }
+
+  .mosaic .row:nth-child(even) {
+    background: linear-gradient(to bottom, #cdcfce 0%,#ffffff 100%);
+  }
+
+  .logoSponsor.usaid {
+    background-position: 0 0;
+  }
+  .logoSponsor.municipiochihuahua {
+    background-position: 0 -75px;
+  }
+  .logoSponsor.arcacontal {
+    background-position: 0 -150px;
+  }
+  .logoSponsor.projectpaz {
+    background-position: 0 -225px;
+  }
+  .logoSponsor.metlife {
+    background-position: 0 -300px;
+  }
+  .logoSponsor.banamex {
+    background-position: 0 -375px;
+  }
+  .logoSponsor.congresochihuahua {
+    background-position: 0 -450px;
+  }
+  .logoSponsor.bancomer {
+    background-position: 0 -525px;
+  }
+  .logoSponsor.delicias {
+    background-position: 0 -600px;
+  }
+  .logoSponsor.gcc {
+    background-position: 0 -675px;
+  }
+  .logoSponsor.bafar {
+    background-position: 0 -750px;
+  }
+  .logoSponsor.gmodelo {
+    background-position: 0 -825px;
+  }
+  .logoSponsor.chihuahua {
+    background-position: 0 -900px;
+  }
+  .logoSponsor.fundacionrcf {
+    background-position: 0 -975px;
+  }
+  .logoSponsor.christensenfund {
+    background-position: 0 -1050px;
+  }
+  .logoSponsor.iyfnet {
+    background-position: 0 -1125px;
+  }
+  .logoSponsor.interceramic {
+    background-position: 0 -1200px;
+  }
+  .logoSponsor.consejo {
+    background-position: 0 -1275px;
+  }
+  .logoSponsor.camargochihuahua {
+    background-position: 0 -1350px;
+  }
+  .logoSponsor.oneworldfutbol {
+    background-position: 0 -1425px;
+  }
+  .logoSponsor.hidalgodelparral {
+    background-position: 0 -1500px;
+  }
+  .logoSponsor.cemefi {
+    background-position: 0 -1575px;
+  }
+  .logoSponsor.comunalia {
+    background-position: 0 -1650px;
+  }
+  .logoSponsor.redeamerica {
+    background-position: 0 -1725px;
+  }
+  .logoSponsor.icfdn {
+    background-position: 0 -1800px;
+  }
+
+  @media (min-width: 575.98px) {
+    .mosaic .row:nth-child(odd) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .mosaic > .row > div {
+    padding: 0;
+  }
+
+  .container {
+    max-width: 1300px;
+  }
+
+</style>
 </head>
 <body>
   <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
-
   <style>
-    :root {
-      --fechac: #a8334e;
-      --text: #636363;
-      --grey: #f6eff6;
+    header {
+      background: ghostwhite;
     }
-
-    img {
-      display: block;
-      margin: 0 auto;
-      max-width: 100%;
-    }
-
-    a {
-      color: inherit;
-    }
-    a:hover {
-      color: var(--fechac) !important;
-    }
-    body {
-      color: var(--text);
-    }
-
-    h1,
-    h2,
-    h3,
-    h4 {
+    header 
+    .itemsMenu .item {
       color: var(--fechac);
-      text-align: center;
+      font-family: 'Catamaran', sans-serif;
+      font-size: 24.5px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      line-height: 1;
+      padding: 12px;
     }
 
-    .contentBody {
-      min-height: calc(100vh - 291.6px);
-    }
-
-    footer {
-      background: var(--grey);
-    }
-
-    input {
-      width: 100%;
-    }
-
-    .logoSponsor {
-      background: url(http://www.fechac.org/web/img/s_sponsors1.jpg) no-repeat;
-      display: block;
-      filter: grayscale(1);
-      height: 75px;
-      transition: filter .3s ease-in-out;
-      width: 168px;
-    }
-    .logoSponsor:hover {
-      filter: grayscale(0);
-    }
-
-    .sponsor:not(.load) .owl-carousel {
-      font-size: 0;
-      overflow-x: auto;
-      white-space: nowrap;
-    }
-
-    .sponsor:not(.load) .item {
-      display: inline-block;
-      font-size: 16px;
-      vertical-align: middle;
-    }
-
-    .mosaic .row:nth-child(odd) {
+    a.btnDonar {
       background: linear-gradient(to bottom, #a7344e 0%,#a2659e 100%);
+      color: white;
+      padding: 10px 20px;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 20px;
     }
 
-    .mosaic .row:nth-child(even) {
-      background: linear-gradient(to bottom, #cdcfce 0%,#ffffff 100%);
+    .ct {
+      position: absolute;
+      top: 11px;
+      right: 0;
     }
 
-    .logoSponsor.usaid {
-      background-position: 0 0;
-    }
-    .logoSponsor.municipiochihuahua {
-      background-position: 0 -75px;
-    }
-    .logoSponsor.arcacontal {
-      background-position: 0 -150px;
-    }
-    .logoSponsor.projectpaz {
-      background-position: 0 -225px;
-    }
-    .logoSponsor.metlife {
-      background-position: 0 -300px;
-    }
-    .logoSponsor.banamex {
-      background-position: 0 -375px;
-    }
-    .logoSponsor.congresochihuahua {
-      background-position: 0 -450px;
-    }
-    .logoSponsor.bancomer {
-      background-position: 0 -525px;
-    }
-    .logoSponsor.delicias {
-      background-position: 0 -600px;
-    }
-    .logoSponsor.gcc {
-      background-position: 0 -675px;
-    }
-    .logoSponsor.bafar {
-      background-position: 0 -750px;
-    }
-    .logoSponsor.gmodelo {
-      background-position: 0 -825px;
-    }
-    .logoSponsor.chihuahua {
-      background-position: 0 -900px;
-    }
-    .logoSponsor.fundacionrcf {
-      background-position: 0 -975px;
-    }
-    .logoSponsor.christensenfund {
-      background-position: 0 -1050px;
-    }
-    .logoSponsor.iyfnet {
-      background-position: 0 -1125px;
-    }
-    .logoSponsor.interceramic {
-      background-position: 0 -1200px;
-    }
-    .logoSponsor.consejo {
-      background-position: 0 -1275px;
-    }
-    .logoSponsor.camargochihuahua {
-      background-position: 0 -1350px;
-    }
-    .logoSponsor.oneworldfutbol {
-      background-position: 0 -1425px;
-    }
-    .logoSponsor.hidalgodelparral {
-      background-position: 0 -1500px;
-    }
-    .logoSponsor.cemefi {
-      background-position: 0 -1575px;
-    }
-    .logoSponsor.comunalia {
-      background-position: 0 -1650px;
-    }
-    .logoSponsor.redeamerica {
-      background-position: 0 -1725px;
-    }
-    .logoSponsor.icfdn {
-      background-position: 0 -1800px;
+    header .container .media {
+      position: relative;
     }
 
-    @media (min-width: 575.98px) {
-      .mosaic .row:nth-child(odd) {
-        flex-direction: row-reverse;
-      }
+    .ct span {
+      color: var(--fechac);
+      font-size: 20px;
     }
 
-    .mosaic > .row > div {
+    nav.itemsMenu > ul {
+      display: flex;
+      justify-content: flex-end;
+      list-style: none;
+      margin: 0;
       padding: 0;
     }
+
+    header .right {
+      align-items: center;
+      display: flex;
+    }
+
+    span.headerSocial {
+      font-size: 24px;
+      margin: 0 16px 0 0;
+    }
+
+    img.logo {
+      float: left;
+      padding: 19px;
+      width: 200px;
+    }
+
+    header .container {
+      position: relative;
+    }
+
+    .row.head {
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .btnSeach {
+      background: transparent;
+      border: none;
+      color: inherit;
+      font-size: 28px;
+    }
   </style>
+
+  <header>
+    <div class="container">
+      <div class="row head">
+        <div class="left">
+          <div class="media">
+            <img class="logo" src="assets/img/logo-fechac.svg" alt="Fechac">
+            <div class="media-body">
+              <h5 class="mt-0">Funcación del Empresario Chihuahuense, A.C.</h5>
+              <p>Formando comunidad</p>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <span class="headerSocial">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </span>
+
+          <form class="form-inline mt-2 mt-md-0">
+            <button class="my-2 my-sm-0 btnSeach" type="button"><i class="fab fa-facebook"></i></button>
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          </form>
+        </div>
+      </div>
+      <nav class="itemsMenu">
+        <ul>
+          <li class="item"><a href="#">Quines somos</a></li>
+          <li class="item"><a href="#">Proyectos</a></li>
+          <li class="item"><a href="#">Transparencia</a></li>
+          <li class="item"><a href="#">Publicaciones</a></li>
+          <li class="item"><a href="#">Apoyo a OSC</a></li>
+          <li class="item"><a href="#">Sala de prensa</a></li>
+          <li class="item"><a href="#">ONU: Agenda 2030</a></li>
+        </ul>
+      </nav>
+      <div class="ct">
+        <span>Tu puedes cambiar vidas, <a href="#" class="btnDonar">Dona hoy</a></span>
+      </div>
+    </div>
+  </header>
+
 
   <section class="contentBody">
     <div class="container">
@@ -342,7 +475,6 @@
         </div>
       </div>
     </section>
-
   </section>
 
   <footer>
@@ -380,7 +512,7 @@
       </div>
       <div class="row">
         <div class="col-lg-2">
-          <img src="assets/img/logo-fechac-2.png" alt="Fechac">
+          <img src="assets/img/logo-fechac.svg" alt="Fechac">
         </div>
         <div class="col-lg-6">
           <h5>Fundación del Empresariado Chihuahuense, A.C.</h5>
