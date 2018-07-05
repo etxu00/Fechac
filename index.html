@@ -18,21 +18,19 @@
 <style>
   :root {
     --fechac: #8a023c;
-    --text: #636363;
-    --grey: #f6eff6;
     --footer: #e2f9f3;
+    --grey: #f6eff6;
+    --text: #636363;
+    --verde: #61d6bc;
   }
-
   body {
     font-family: 'Catamaran', sans-serif;
   }
-
   img {
     display: block;
     margin: 0 auto;
     max-width: 100%;
   }
-
   a {
     color: inherit;
   }
@@ -42,7 +40,6 @@
   body {
     color: var(--text);
   }
-
   h1,
   h2,
   h3,
@@ -50,19 +47,15 @@
     color: var(--fechac);
     text-align: center;
   }
-
   .contentBody {
     min-height: calc(100vh - 291.6px);
   }
-
   footer {
     background: var(--footer);
   }
-
   input {
     width: 100%;
   }
-
   .logoSponsor {
     background: url(http://www.fechac.org/web/img/s_sponsors1.jpg) no-repeat;
     display: block;
@@ -74,27 +67,23 @@
   .logoSponsor:hover {
     filter: grayscale(0);
   }
-
   .sponsor:not(.load) .owl-carousel {
     font-size: 0;
     overflow-x: auto;
     white-space: nowrap;
   }
-
   .sponsor:not(.load) .item {
     display: inline-block;
     font-size: 16px;
     vertical-align: middle;
   }
-
   .mosaic .row:nth-child(odd) {
     background: linear-gradient(to bottom, #a7344e 0%,#a2659e 100%);
+    color: white;
   }
-
   .mosaic .row:nth-child(even) {
     background: linear-gradient(to bottom, #cdcfce 0%,#ffffff 100%);
   }
-
   .logoSponsor.usaid {
     background-position: 0 0;
   }
@@ -170,21 +159,17 @@
   .logoSponsor.icfdn {
     background-position: 0 -1800px;
   }
-
   @media (min-width: 575.98px) {
     .mosaic .row:nth-child(odd) {
       flex-direction: row-reverse;
     }
   }
-
   .mosaic > .row > div {
     padding: 0;
   }
-
   .container {
     max-width: 1300px;
   }
-
 </style>
 </head>
 <body>
@@ -193,7 +178,7 @@
   <![endif]-->
   <style>
     header {
-      background: ghostwhite;
+      background: white;
     }
     header 
     .itemsMenu .item {
@@ -205,7 +190,6 @@
       line-height: 1;
       padding: 12px;
     }
-
     a.btnDonar {
       background: linear-gradient(to bottom, #a7344e 0%,#a2659e 100%);
       color: white;
@@ -214,22 +198,18 @@
       text-transform: uppercase;
       font-size: 20px;
     }
-
     .ct {
       position: absolute;
       top: 11px;
       right: 0;
     }
-
     header .container .media {
       position: relative;
     }
-
     .ct span {
       color: var(--fechac);
       font-size: 20px;
     }
-
     nav.itemsMenu > ul {
       display: flex;
       justify-content: flex-end;
@@ -237,37 +217,183 @@
       margin: 0;
       padding: 0;
     }
-
     header .right {
       align-items: center;
       display: flex;
     }
-
     span.headerSocial {
       font-size: 24px;
       margin: 0 16px 0 0;
     }
-
     img.logo {
       float: left;
       padding: 19px;
       width: 200px;
     }
-
     header .container {
       position: relative;
     }
-
     .row.head {
       align-items: center;
       justify-content: space-between;
     }
-
     .btnSeach {
       background: transparent;
       border: none;
       color: inherit;
       font-size: 28px;
+    }
+    .mosaic .colCenter p {
+      font-size: 22px;
+      line-height: 2;
+      text-align: center;
+    }
+    .mosaic .colCenter h3 {
+      font-size: 50px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .mosaic .row:nth-child(odd) .colCenter h3 {
+      color: white;
+    }
+    .colCenter {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0 50px !important;
+    }
+    .mosaic .row:nth-child(even) .colCenter .btn {
+      border-color: var(--fechac)
+    }
+    .colCenter .btn {
+      border-radius: 2px;
+      border: .5px solid;
+      font-size: 20px;
+      font-weight: 200;
+      text-transform: uppercase;
+    }
+    footer input,
+    footer textarea {
+      background: transparent;
+      border: 2px solid var(--verde);
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      width: 100% !important;
+    }
+    footer textarea {
+      height: 100%;
+      padding: 5px 20px;
+    }
+    footer input {
+      line-height: 0;
+      padding: 5px 20px;
+    }
+    footer .col-lg-6.colFooter.nm {
+      margin: 0 0 0 0;
+    }
+    footer .col-lg-6.colFooter {
+      margin: 0 0 20px 0;
+      max-width: 100%;
+    }
+    footer h3 {
+      font-size: 47px;
+      font-weight: 900;
+      margin: 0;
+      padding: 2rem;
+    }
+    .verde a i {
+      color: var(--verde)
+    }
+    .colFooterGreen ul {
+      font-weight: 600;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-transform: uppercase;
+    }
+    .col-lg-6.info p {
+      margin: 0;
+    }
+    .row.end {
+      align-items: flex-end;
+    }
+    section.gb-dark h2 {
+      color: white;
+      font-size: 5rem;
+      font-weight: 300;
+      margin: 0 0 2rem 0;
+    }
+    section.gb-dark {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url(assets/img/bg.jpg);
+      color: white;
+      font-size: 22px;
+      padding: 4rem 0 2rem 0;
+      position: relative;
+      text-align: center;
+    }
+    section.gb-dark:before {
+      background: rgba(0, 0, 0, 0.71);
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+    .num p:first-child {
+      font-size: 3rem;
+    }
+    .num p:not(.h2) {
+      font-size: 15px;
+      opacity: .7;
+      text-transform: uppercase;
+    }
+    footer .btnDonar {
+      background: #a7344e;
+      border-radius: 0;
+      border: none;
+      color: white;
+      font-size: 20px;
+      font-weight: 800;
+      margin: 9px 0 0 0;
+      padding: 10px 20px;
+      text-transform: uppercase;
+    }
+    .sectionApoyo h2 {
+      color: var(--text);
+      font-size: 4rem;
+      font-weight: 800;
+    }
+
+    section.sectionApoyo {
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    .sectionApoyo h3 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    a.btn.fechac {
+      border: 2px solid;
+      color: var(--fechac);
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1;
+      padding: 1rem 2rem;
+      text-transform: uppercase;
+    }
+    a.btn.fechac.dona {
+      background: linear-gradient(to bottom, #a7344e 0%,#a2659e 100%);
+      color: white;
     }
   </style>
 
@@ -325,71 +451,24 @@
       </div>
     </div>
 
-    <section class="container">
-      <div class="sectionApoyo row">
-        <div class="col-sm-12">
-          <h2>FECHAC en números</h2>
-        </div>
-        <div class="col-sm-12 col-lg-4">
-          <p>4,200</p>
-          <p>Proyectos apoyados</p>
-        </div>
-        <div class="col-sm-12 col-lg-4">
-          <p>2,000 MILLONES</p>
-          <p>De pesos invertidos en todo el estado.</p>
-        </div>
-        <div class="col-sm-12 col-lg-4">
-          <p>4,200</p>
-          <p>Personas han mejorado su condición de vida</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="sectionApoyo row">
-      <div class="col-sm-12 col-lg-6">
-        <h2>Solicita apoyo</h2>
-        <h3>Todos necesitamos de alguien, presenta tu proyecto.</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quis veritatis quas, optio eaque assumenda aut laboriosam dicta provident nulla molestiae officia dolore, ut, tenetur iure atque alias, libero rerum!</p>
-        <a href="#" class="btn">Conoce más</a>
-      </div>
-      <div class="col-sm-12 col-lg-6">
-        <h2>Quiero donar</h2>
-        <h3>Tu eres de gran ayuda para cambiar vidas.</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis provident, magni quam nam nobis dignissimos iure, alias fugiat! Deleniti quas consequatur possimus modi. Eaque similique eligendi, quisquam, vel eveniet doloribus!</p>
-        <a href="#" class="btn">Dona aquí</a>
-      </div>
-    </section>
-
-    <section class="ctVideo">
-      <img id="imgPreVideo" class="prev center" src="https://picsum.photos/1024/568">
-      <button id="buttonPlay" class="button play center d-none" type="button">play</button>
-      <button id="buttonPause" class="button pause center d-none" type="button">pause</button>
-      <video id="video" class="center d-none" controls="true">
-        <source src="http://www.maquinasm.com/img/video.mp4" type="video/mp4">
-      </video>
-    </section>
-
-    <section class="mosaic">
-      <div class="row">
-        <div class="col-sm-12 col-lg-6">
-          <h3>Caso de éxito</h3>
-          <h4>Albergue infantil Delicias</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia omnis magnam quae, quas laboriosam sint et atque numquam adipisci nobis deserunt placeat, iste ullam fugiat temporibus nesciunt praesentium. Et, laborum.</p>
-          <a href="#" class="btn">Conoce más</a>
-        </div>
-        <div class="col-sm-12 col-lg-6">
-          <img src="https://picsum.photos/1024/468">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12 col-lg-6">
-          <h3>Caso de éxito</h3>
-          <h4>Albergue infantil Delicias</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia omnis magnam quae, quas laboriosam sint et atque numquam adipisci nobis deserunt placeat, iste ullam fugiat temporibus nesciunt praesentium. Et, laborum.</p>
-          <a href="#" class="btn">Conoce más</a>
-        </div>
-        <div class="col-sm-12 col-lg-6">
-          <img src="https://picsum.photos/1024/468">
+    <section class="gb-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <h2>FECHAC en números</h2>
+          </div>
+          <div class="col-sm-12 col-lg-4 num">
+            <p class="h2">4,200</p>
+            <p>Proyectos apoyados</p>
+          </div>
+          <div class="col-sm-12 col-lg-4 num">
+            <p class="h2">2,000 MILLONES</p>
+            <p>De pesos invertidos en todo el estado.</p>
+          </div>
+          <div class="col-sm-12 col-lg-4 num">
+            <p class="h2">4,200</p>
+            <p>Personas han mejorado su condición de vida</p>
+          </div>
         </div>
       </div>
     </section>
@@ -475,6 +554,131 @@
         </div>
       </div>
     </section>
+
+    <section class="sectionApoyo row">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-lg-6">
+            <h2>Solicita apoyo</h2>
+            <h3>Todos necesitamos de alguien, presenta tu proyecto.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quis veritatis quas, optio eaque assumenda aut laboriosam dicta provident nulla molestiae officia dolore, ut, tenetur iure atque alias, libero rerum!</p>
+            <a href="#" class="btn fechac">Conoce más</a>
+          </div>
+          <div class="col-sm-12 col-lg-6">
+            <h2>Quiero donar</h2>
+            <h3>Tu eres de gran ayuda para cambiar vidas.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis provident, magni quam nam nobis dignissimos iure, alias fugiat! Deleniti quas consequatur possimus modi. Eaque similique eligendi, quisquam, vel eveniet doloribus!</p>
+            <a href="#" class="btn fechac dona">Dona aquí</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .ctVideo {
+        background: #000;
+        overflow: hidden;
+        padding-top: 44.5%;
+        position: relative;
+        width: 100%;
+      }
+      .ctVideo:not(.play):before {
+        content: 'Click para reproducir nuestro vídeo';
+        position: absolute;
+        z-index: 20;
+        left: 50%;
+        top: 60%;
+        transform: translate(-50%, -50%);
+        line-height: 1;
+        color: white;
+        font-size: 26px;
+      }
+      .ctVideo:hover .center.button {
+        background: rgba(0,0,0,0.25) url("assets/img/play-button.png") no-repeat center center;
+        -webkit-box-shadow: 0 0 14px 10px rgba(0,0,0,0.25);
+        box-shadow: 0 0 14px 10px rgba(0,0,0,0.25);
+      }
+      .ctVideo:hover .center.button.pause {
+        background: rgba(0,0,0,0.25) url("assets/img/pause.png") no-repeat center center;
+        opacity: 1;
+        -ms-filter: none;
+        filter: none;
+      }
+      .ctVideo .center {
+        display: block;
+        height: auto;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 100%;
+        z-index: 1;
+      }
+      .ctVideo .center.button {
+        background: transparent url("assets/img/play-button.png") no-repeat center center;
+        -webkit-background-size: 80% !important;
+        -moz-background-size: 80% !important;
+        background-size: 80% !important;
+        border: none;
+        border-radius: 100%;
+        cursor: pointer;
+        font-size: 0;
+        height: 120px;
+        width: 120px;
+        -webkit-transition: 0.3s cubic-bezier(0.42, 0, 0.82, 1.26);
+        -moz-transition: 0.3s cubic-bezier(0.42, 0, 0.82, 1.26);
+        -o-transition: 0.3s cubic-bezier(0.42, 0, 0.82, 1.26);
+        -ms-transition: 0.3s cubic-bezier(0.42, 0, 0.82, 1.26);
+        transition: 0.3s cubic-bezier(0.42, 0, 0.82, 1.26);
+      }
+      .ctVideo .center.button.pause {
+        background: transparent url("assets/img/pause.png") no-repeat center center;
+        bottom: 1rem;
+        left: inherit;
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        right: 1rem;
+        top: inherit;
+        z-index: 3;
+      }
+      .ctVideo .center.off {
+        display: none;
+      }
+    </style>
+    <div id="ctVideo" class="ctVideo">
+      <img id="imgPreVideo" class="prev center" src="assets/img/video.jpg">
+      <button id="buttonPlay" class="button play center" type="button">play</button>
+      <button id="buttonPause" class="button pause center off" type="button">pause</button>
+      <video id="video" class="center off" controls="true"><source src="http://www.maquinasm.com/img/video.mp4" type="video/mp4"></video>
+    </div>
+
+    <section class="mosaic">
+      <div class="row">
+        <div class="col-sm-12 col-lg-6 colCenter">
+          <h3>Caso de éxito</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia omnis magnam quae, quas laboriosam sint et atque numquam adipisci nobis deserunt placeat, iste ullam fugiat temporibus nesciunt praesentium. Et, laborum.</p>
+          <a href="#" class="btn">Conoce más</a>
+        </div>
+        <div class="col-sm-12 col-lg-6">
+          <img src="https://picsum.photos/1024/468">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-lg-6 colCenter">
+          <h3>Caso de éxito</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia omnis magnam quae, quas laboriosam sint et atque numquam adipisci nobis deserunt placeat, iste ullam fugiat temporibus nesciunt praesentium. Et, laborum.</p>
+          <a href="#" class="btn">Conoce más</a>
+        </div>
+        <div class="col-sm-12 col-lg-6">
+          <img src="https://picsum.photos/1024/468">
+        </div>
+      </div>
+    </section>
   </section>
 
   <footer>
@@ -484,43 +688,43 @@
         <div class="col-sm-12 col-lg-8">
           <div class="row">
             <div class="col-sm-12 col-lg-6">
-              <div class="col-sm-12 col-lg-6">
-                <input type="text">
+              <div class="col-sm-12 col-lg-6 colFooter">
+                <input type="text" placeholder="Nombre">
               </div>
-              <div class="col-sm-12 col-lg-6">
-                <input type="text">
+              <div class="col-sm-12 col-lg-6 colFooter nm">
+                <input type="text" placeholder="Email">
               </div>
             </div>
             <div class="col-sm-12 col-lg-6">
-              <div class="col-sm-12 col-lg-6">
-                <input type="text">
+              <div class="col-sm-12 col-lg-6 colFooter">
+                <input type="text" placeholder="Ciudad">
               </div>
-              <div class="col-sm-12 col-lg-6">
-                <input type="text">
+              <div class="col-sm-12 col-lg-6 colFooter nm">
+                <input type="text" placeholder="Teléfono">
               </div>
             </div>
           </div>
         </div>
         <div class="col-sm-12 col-lg-4">
-          <textarea name="" id="" rows="2">test...</textarea>
+          <textarea></textarea>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-12 text-right">
-          <button  class="btn btn-primary pull-right" type="button">Envíar</button>
+          <button  class="btn btn-primary pull-right btnDonar" type="button">Envíar</button>
         </div>
       </div>
-      <div class="row">
+      <div class="row end">
         <div class="col-lg-2">
           <img src="assets/img/logo-fechac.svg" alt="Fechac">
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 info">
           <h5>Fundación del Empresariado Chihuahuense, A.C.</h5>
           <p>Prolongación Teófilo Borunda #10820, Col. Labor de Terrazas</p>
           <p>Chihuahua, Chih. México. C.P. 31223</p>
           <p>Tel. (01 614) 413-2020</p>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 colFooterGreen">
           <ul>
             <li>
               <a href="#">Denuncia</a>
@@ -536,7 +740,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-lg-1">
+        <div class="col-lg-1 verde">
           <a href="#"><i class="fab fa-facebook"></i></a>
           <a href="#"><i class="fab fa-twitter"></i></a>
           <a href="#"><i class="fab fa-youtube"></i></a>
@@ -550,5 +754,31 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
+  <script>
+    var $buttonPause = document.getElementById('buttonPause')
+    var $buttonPlay  = document.getElementById('buttonPlay')
+    var $imgPreVideo = document.getElementById('imgPreVideo')
+    var $video       = document.getElementById('video')
+    var $ctVideo     = document.getElementById('ctVideo')
+
+    $buttonPlay.onclick = function() {
+      $video.play()
+      showVideo()
+    }
+
+    $buttonPause.onclick = function() {
+      $video.pause()
+      $video.currentTime = 0;
+      showVideo()
+    }
+
+    function showVideo() {
+      $ctVideo.classList.toggle('play')
+      $buttonPause.classList.toggle('off')
+      $buttonPlay.classList.toggle('off')
+      $imgPreVideo.classList.toggle('off')
+      $video.classList.toggle('off')
+    }
+  </script>
 </body>
 </html>
