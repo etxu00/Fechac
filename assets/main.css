@@ -59,11 +59,12 @@ input {
   font-size: 16px;
   vertical-align: middle;
 }
+.mosaic.notEven .row:nth-child(even),
 .mosaic .row:nth-child(odd) {
   background: linear-gradient(to bottom, #a7344e 0%,#a2659e 100%);
   color: white;
 }
-.mosaic .row:nth-child(even) {
+.mosaic:not(.notEven) .row:nth-child(even) {
   background: linear-gradient(to bottom, #cdcfce 0%,#ffffff 100%);
 }
 .logoSponsor.usaid {
@@ -228,6 +229,7 @@ header .container {
   font-weight: 700;
   text-transform: uppercase;
 }
+.mosaic.notEven .row:nth-child(even) .colCenter h3,
 .mosaic .row:nth-child(odd) .colCenter h3 {
   color: white;
 }
@@ -239,7 +241,7 @@ header .container {
   justify-content: center;
   padding: 0 50px !important;
 }
-.mosaic .row:nth-child(even) .colCenter .btn {
+.mosaic:not(.notEven) .row:nth-child(even) .colCenter .btn {
   border-color: var(--fechac)
 }
 .colCenter .btn {
@@ -745,7 +747,158 @@ form.orderNews select {
   padding: 1rem 0 0 0;
   border-top: 2px solid var(--text);
 }
-
 .new.x {
   margin-bottom: 2rem;
+}
+.new.x > h2 {
+  margin: 0;
+  display: block;
+  width: 100%;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 29px;
+}
+.new.x p.date {
+  margin: 0;
+}
+.container.apoyo p {
+  text-align: left;
+  width: 100%;
+}
+.container.apoyo .faq h2 {
+  border-bottom: 2px solid var(--verde);
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.container.apoyo .faq p {
+  margin: 0 !important;
+}
+.container.apoyo .faq p:last-child {
+  margin: 0 0 2rem 0 !important;
+}
+.text-left {
+  text-align: left !important;
+}
+.home1 p.en {
+  font-size: 1.75rem;
+}
+.home1 p.en:before, .home1 p.en:after {
+  content: '"';
+}
+.breadcrum {
+  display: flex;
+  font-size: 1.25rem;
+  font-weight: 500;
+  list-style: none;
+  margin: 1rem 0 0 0;
+  padding: 0;
+  text-align: left;
+  text-transform: uppercase;
+}
+.breadcrum > li:not(:last-child):after {
+  content: '/';
+  margin: 0 .5rem;
+}
+.callToAction {
+  margin: 3rem 0 5rem 0;
+  border-top: 2px solid var(--verde);
+  padding: 2rem;
+}
+.callToAction p {
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--fechac);
+  margin: 0 !important;
+  width: 100%;
+}
+.strong {
+  font-weight: 400 !important;
+}
+.container.homeProyecto a {
+  display: block;
+}
+.container.homeProyecto h3 {
+  text-align: left;
+}
+.container.homeProyecto .row {
+  margin: 3rem 0;
+}
+.container.homeProyecto h3:after {
+  content: '';
+  display: block;
+  width: 35%;
+  height: 3px;
+  background: var(--fechac);
+  margin: 4px 0;
+}
+.container.homeProyecto {
+  background: url(https://images.vexels.com/media/users/3/148650/isolated/preview/17e90231c8db16d97810081b82f62682-mapa-del-estado-de-chihuahua-by-vexels.png) no-repeat center center;
+}
+.home1 .p,
+.p {
+  text-align: left;
+  margin: 0;
+  width: 100%;
+}
+.home1 .p.fechac {
+  color: var(--fechac);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+:root {
+  --x: calc(30% + 23px);
+}
+.mosaic > .row > div {
+  position: relative;
+}
+.mosaic.notEven .row > .colCenter {
+  z-index: 2;
+}
+.mosaic.notEven .row:nth-child(even) .colCenter:before,
+.mosaic.notEven .row:nth-child(odd) .colCenter:before {
+  background: linear-gradient(135deg, #a7344e 0%, #a2659e 100%);
+  content: '';
+  display: block;
+  left: 100%;
+  padding-top: var(--x);
+  position: absolute;
+  top: 0;
+  transform-origin: top left;
+  transform: rotate(45deg);
+  width: var(--x);
+  z-index: -1;
+}
+.mosaic.notEven .row:nth-child(odd) .colCenter:before {
+  bottom: 0;
+  left: inherit;
+  right: 100%;
+  top: inherit;
+  transform-origin: bottom right;
+}
+h1.pp {
+  background: white;
+  display: inline-block;
+  font-size: 4rem;
+  font-weight: 300;
+  margin: 2rem auto;
+  padding: 10px;
+}
+.center {
+  position: relative;
+  text-align: center;
+}
+.center:before {
+  background: var(--fechac);
+  content: '';
+  display: block;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  z-index: -1;
 }
