@@ -7,8 +7,24 @@
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="manifest" href="site.webmanifest">
-<link rel="apple-touch-icon" href="icon.png">
+<link rel="apple-touch-icon" sizes="57x57" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="apple-touch-icon" sizes="60x60" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="apple-touch-icon" sizes="72x72" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="apple-touch-icon" sizes="76x76" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="apple-touch-icon" sizes="114x114" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="apple-touch-icon" sizes="120x120" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="apple-touch-icon" sizes="144x144" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="apple-touch-icon" sizes="152x152" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="icon" type="image/png" sizes="192x192"  href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="icon" type="image/png" sizes="96x96" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://www.fechac.org/web/img/favicon.ico">
+
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 <!-- Place favicon.ico in the root directory -->
 
@@ -24,7 +40,7 @@
   <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
-  <header>
+  <header class="wow fadeInUp">
     <div class="container">
       <div class="row head">
         <div class="left">
@@ -49,10 +65,29 @@
           </form>
         </div>
       </div>
-      <nav class="itemsMenu">
+      <button class="btnOpenMenu open" type="button" onclick="this.classList.toggle('open');document.getElementById('menu').classList.toggle('open')">
+        <img class="open" src="https://png.icons8.com/metro/50/8a023c/menu.png">
+        <img class="close" src="https://png.icons8.com/ios/50/ffffff/delete-sign-filled.png">
+      </button>
+      <nav id="menu" class="itemsMenu">
         <ul>
-          <li class="item"><a href="#">Quines somos</a></li>
-          <li class="item"><a href="#">Proyectos</a></li>
+          <li class="item"><a href="#">Quienes somos</a></li>
+          <li class="item">
+            <a href="#">Proyectos</a>
+            <ul>
+              <li class="item"><a href="#">Camargo</a></li>
+              <li class="item"><a href="#">Chihuahua</a></li>
+              <li class="item"><a href="#">Cuauhtémoc</a></li>
+              <li class="item"><a href="#">Delicias</a></li>
+              <li class="item"><a href="#">Índole estatal</a></li>
+              <li class="item"><a href="#">Juárez</a></li>
+              <li class="item"><a href="#">Nvo. Casas Grandes</a></li>
+              <li class="item"><a href="#">Ojinaga</a></li>
+              <li class="item"><a href="#">Parral</a></li>
+              <li class="item"><a href="#">Zona serrana</a></li>
+              <li class="item"><a href="#">Proyectos</a></li>
+            </ul>
+          </li>
           <li class="item"><a href="#">Transparencia</a></li>
           <li class="item"><a href="#">Publicaciones</a></li>
           <li class="item"><a href="#">Apoyo a OSC</a></li>
@@ -60,13 +95,13 @@
           <li class="item"><a href="#">ONU: Agenda 2030</a></li>
         </ul>
       </nav>
-      <div class="ct">
+      <div class="ct wow fadeInUp">
         <span>Tu puedes cambiar vidas, <a href="#" class="btnDonar">Dona hoy</a></span>
       </div>
     </div>
   </header>
 
-  <section class="slide owl-carousel owl-theme">
+  <section class="slide owl-carousel owl-theme wow fadeInUp">
     <div class="item wow fadeInUp">
       <div class="ctLeyend">
         <div class="leyend">Una sociedad que ayuda, trascender</div>
@@ -81,7 +116,7 @@
     </div>
   </section>
 
-  <section class="contentBody home1">
+  <section class="contentBody home1 wow fadeInUp npb">
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
@@ -190,7 +225,7 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-lg-6">
-            <h2>Solicita apoyo</h2>
+            <h2>Solicita apoyo</h2><!--900 -->
             <h3>Todos necesitamos de alguien, presenta tu proyecto.</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quis veritatis quas, optio eaque assumenda aut laboriosam dicta provident nulla molestiae officia dolore, ut, tenetur iure atque alias, libero rerum!</p>
             <a href="#" class="btn fechac">Conoce más</a>
@@ -225,9 +260,9 @@
       </div>
       <div class="row">
         <div class="col-sm-12 col-lg-6 colCenter">
-          <h3>Caso de éxito</h3>
+          <h3>Noticas</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia omnis magnam quae, quas laboriosam sint et atque numquam adipisci nobis deserunt placeat, iste ullam fugiat temporibus nesciunt praesentium. Et, laborum.</p>
-          <a href="#" class="btn">Conoce más</a>
+          <a href="#" class="btn">Ver más noticas</a>
         </div>
         <div class="col-sm-12 col-lg-6">
           <img src="https://picsum.photos/1024/468">
@@ -238,7 +273,7 @@
 
   <footer>
     <div class="container">
-      <h3>Haz contacto, junyos poodemos ayudar.</h3>
+      <h3>Haz contacto, juntos podemos ayudar.</h3>
       <div class="row">
         <div class="col-sm-12 col-lg-8">
           <div class="row">
@@ -247,12 +282,12 @@
                 <input type="text" placeholder="Nombre">
               </div>
               <div class="col-sm-12 col-lg-6 colFooter nm">
-                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Ciudad">
               </div>
             </div>
             <div class="col-sm-12 col-lg-6">
               <div class="col-sm-12 col-lg-6 colFooter">
-                <input type="text" placeholder="Ciudad">
+                <input type="text" placeholder="Email">
               </div>
               <div class="col-sm-12 col-lg-6 colFooter nm">
                 <input type="text" placeholder="Teléfono">
@@ -261,12 +296,12 @@
           </div>
         </div>
         <div class="col-sm-12 col-lg-4">
-          <textarea></textarea>
+          <textarea>Comentario</textarea>
         </div>
       </div>
       <div class="row">
         <div class="col-sm-12 text-right">
-          <button  class="btn btn-primary pull-right btnDonar" type="button">Envíar</button>
+          <button class="btn btn-primary pull-right btnDonar" type="button">Envíar</button>
         </div>
       </div>
       <div class="row end">
@@ -310,6 +345,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.min.js"></script>  
   <script src="http://demo.tinywall.net/numscroller/numscroller-1.0.js"></script><!-- https://inorganik.github.io/countUp.js/ -->
+  <script src="http://tech.congressa.mx/tmp/site/adoors/assets/wow.min.js"></script><!-- https://inorganik.github.io/countUp.js/ -->
   <script src="js/main.js"></script>
   <script>
     var $buttonPause = document.getElementById('buttonPause')
@@ -344,6 +380,8 @@
         loop       : true
         //- onChanged : callback
       })
+
+      new WOW().init();
     })
   </script>
 </body>

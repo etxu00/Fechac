@@ -7,8 +7,19 @@
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="manifest" href="site.webmanifest">
-<link rel="apple-touch-icon" href="icon.png">
+<link rel="apple-touch-icon" sizes="57x57" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="apple-touch-icon" sizes="60x60" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="apple-touch-icon" sizes="72x72" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="apple-touch-icon" sizes="76x76" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="apple-touch-icon" sizes="114x114" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="apple-touch-icon" sizes="120x120" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="apple-touch-icon" sizes="144x144" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="apple-touch-icon" sizes="152x152" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="icon" type="image/png" sizes="192x192"  href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="icon" type="image/png" sizes="96x96" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://www.fechac.org/web/img/favicon.ico">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 <!-- Place favicon.ico in the root directory -->
 
@@ -24,7 +35,7 @@
   <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
-  <header>
+  <header class="wow fadeInUp">
     <div class="container">
       <div class="row head">
         <div class="left">
@@ -49,10 +60,29 @@
           </form>
         </div>
       </div>
-      <nav class="itemsMenu">
+      <button class="btnOpenMenu open" type="button" onclick="this.classList.toggle('open');document.getElementById('menu').classList.toggle('open')">
+        <img class="open" src="https://png.icons8.com/metro/50/8a023c/menu.png">
+        <img class="close" src="https://png.icons8.com/ios/50/ffffff/delete-sign-filled.png">
+      </button>
+      <nav id="menu" class="itemsMenu">
         <ul>
-          <li class="item"><a href="#">Quines somos</a></li>
-          <li class="item"><a href="#">Proyectos</a></li>
+          <li class="item"><a href="#">Quienes somos</a></li>
+          <li class="item">
+            <a href="#">Proyectos</a>
+            <ul>
+              <li class="item"><a href="#">Camargo</a></li>
+              <li class="item"><a href="#">Chihuahua</a></li>
+              <li class="item"><a href="#">Cuauhtémoc</a></li>
+              <li class="item"><a href="#">Delicias</a></li>
+              <li class="item"><a href="#">Índole estatal</a></li>
+              <li class="item"><a href="#">Juárez</a></li>
+              <li class="item"><a href="#">Nvo. Casas Grandes</a></li>
+              <li class="item"><a href="#">Ojinaga</a></li>
+              <li class="item"><a href="#">Parral</a></li>
+              <li class="item"><a href="#">Zona serrana</a></li>
+              <li class="item"><a href="#">Proyectos</a></li>
+            </ul>
+          </li>
           <li class="item"><a href="#">Transparencia</a></li>
           <li class="item"><a href="#">Publicaciones</a></li>
           <li class="item"><a href="#">Apoyo a OSC</a></li>
@@ -72,18 +102,105 @@
         <div class="col-sm-12">
           <h2 class="text-left">Apoyo a OSC</h2>
           <p>Qué y a quiénes apoya Fechac<br>La Fundación del Empresariado Chihuahuense es una Asociación Civil sin fines de lucro, independiente y apartidista, que financia proyectos sociales de organizaciones de la sociedad civil, instituciones educativas y de protección de la salud, que benefician directamente a personas, sectores y regiones de escasos recursos; comunidades indígenas y grupos vulnerables por edad, sexo o problemas de discapacidad.</P>
-          <P>Siendo los depositarios de la confianza de los más de 39 mil empresarios chihuahuenses que realizan una aportación financiera para contribuir a la formación de una mejor comunidad, nuestra institución tiene un serio compromiso con la transparencia y la eficiencia en el manejo de los recursos. Para ello, contamos con procedimientos y políticas claros bajo los cuales se lleva a cabo la selección de proyectosque pueden ser apoyados.</P>
-          <P>A continuación, presentamos algunas de las preguntas frecuentes de las instituciones que desean ser beneficiarias de Fechac, así como algunas recomendaciones a tomar en cuenta para la presentación de proyectos.</P>
+          <p>Siendo los depositarios de la confianza de los más de 39 mil empresarios chihuahuenses que realizan una aportación financiera para contribuir a la formación de una mejor comunidad, nuestra institución tiene un serio compromiso con la transparencia y la eficiencia en el manejo de los recursos. Para ello, contamos con procedimientos y políticas claros bajo los cuales se lleva a cabo la selección de proyectos que pueden ser apoyados.</p>
+          <p>A continuación, presentamos algunas de las preguntas frecuentes de las instituciones que desean ser beneficiarias de Fechac, así como algunas recomendaciones a tomar en cuenta para la presentación de proyectos.</p>
         </div>
       </div>
+      
       <div class="row">
+        <style>
+          .collapse > div {
+            text-align: left !important;
+            padding: 1rem 0 1rem 2rem;
+            font-size: 18px !important;
+          }
+          .collapse > div a {
+            color: var(--fechac);
+          }
+        </style>
         <div class="col-sm-12 faq">
           <h2>Preguntas frecuentes</h2>
-          <p class="q">¿Quiénes pueden ser beneficiarios de Fechac?</p>
-          <p class="q">¿En qué áreas y qué tipo de proyectos apoya Fechac?</p>
-          <p class="q">¿Cómo se pueden obtener recursos?</p>
-          <p class="q">¿Qué documentación se debe presentar?</p>
-          <p class="q">¿Cuál es el tiempo de respuesta aproximado?</p>
+          <p class="q" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">¿Quiénes pueden ser beneficiarios de Fechac?</p>
+          <div class="collapse" id="collapseExample">
+            <div>
+
+              <ul>
+                <li>Organizaciones legalmente constituidas que operen dentro de los límites del estado de Chihuahua y que son donatarias autorizadas por el Sistema de Administración Tributaria</li>
+                <li>Instituciones de carácter público dedicadas a la educación básica y a la protección de la salud</li>
+              </ul>
+              <p>No pueden recibir financiamiento de Fechac para el desarrollo de proyectos sociales:</p>
+              <ul>
+                <li>Personas físicas o individuos independientes</li>
+                <li>Grupos comunitarios que no cuentan con una figura legal</li>
+                <li>Instituciones lucrativas</li>
+                <li>Instituciones de segundo piso</li>
+                <li>Organizaciones legalmente constituidas pero que no son donatarias autorizadas por el Sistema de Administración Tributaria</li>
+                <li>Instituciones cuyo proyecto no se lleve a cabo dentro de los límites del estado de Chihuahua</li>
+              </ul>
+
+            </div>
+          </div>
+          <p class="q" data-toggle="collapse" href="#collapseExample0" role="button" aria-expanded="false" aria-controls="collapseExample0">¿En qué áreas y qué tipo de proyectos apoya Fechac?</p>
+          <div class="collapse" id="collapseExample0">
+            <div>
+              
+            <p>Apoyamos proyectos enfocados en tres áreas específicas de intervención:</p>
+            <ul>
+              <li>Educación básica integral de calidad</li>
+              <li>Salud preventiva</li>
+              <li>Desarrollo de capital social*</li>
+            </ul>
+            <p><i>* NOTA: Para Fechac, el término de capital social se refiere a las relaciones de confianza que se generan entre grupos de personas, instituciones o comunidades, que les permiten trabajar en equipo en proyectos de mejora para su propio entorno. También se refiere al fortalecimiento de la labor de las organizaciones de la sociedad civil a través de la capacitación, al impulso al voluntariado y a la promoción de una cultura de responsabilidad social tanto ciudadana como empresarial.</i></p>
+
+            <p>
+              Financiamos, tanto proyectos constructivos (construcción, reconstrucción o equipamiento de instalaciones o adquisición de activos), como el desarrollo e implementación de programas que aporten a la mejora de cualquiera de las tres áreas antes mencionadas.
+            </p>
+          
+            </div>
+          </div>
+          <p class="q" data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">¿Cómo se pueden obtener recursos?</p>
+          <div class="collapse" id="collapseExample1">
+            <div>
+              
+            <p>Para obtener un apoyo por parte de Fechac, debe presentarse una solicitud acompañada de un proyecto (enfocado en cualquiera de nuestras 3 áreas de intervención) para su consideración, de acuerdo al siguiente proceso:</p>
+            <ol>
+              <li><a href="contacto.php">Ubicar</a> la oficina de Fechac que le corresponde, de acuerdo a la región donde desarrollará su proyecto y enviar una carta petición de financiamiento del mismo dirigida al Director  de Fechac para dicha zona (<a href="/pdf/solicitud/carta_peticion.doc" target="_blank">ejemplo de carta</a>)</li>
+              <li>Descargar y llenar el documento <a href="/pdf/solicitud/f15_formulacion_de_proyectos.xls" target="_blank">F15 Formulación del proyecto</a> el cual será la base para el llenado de la solicitud en línea</li>
+              <li>Llenar y enviar la <a href="/solicitud" target="_blank">F16 solicitud en línea.</a> (Una vez iniciada la solicitud, contará con 30 días naturales para concluirla y enviarla; de no hacerlo, el sistema la considerará cerrada automáticamente)</li>
+              <li>Un ejecutivo de Fechac le contactará y le proporcionará un correo electrónico para que envíe el documento “F15 Formulación de Proyecto”</li>
+              <li>Personal de Fechac concertará una o varias citas con  la persona que se haya establecido como contacto en la solicitud en línea, para visitar las instalaciones de  la organización y conocer más detalles sobre el proyecto que se presentó a consideración</li>
+              <li>Si su proyecto es viable, se le pedirá presentar físicamente la documentación que acredita a la organización y al proyecto</li>
+            </ol>
+          
+            </div>
+          </div>
+          <p class="q" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">¿Qué documentación se debe presentar?</p>
+          <div class="collapse" id="collapseExample2">
+            <div>
+              
+            <ul>
+              <li>Inicialmente <a href="contacto.php">ubicar</a> la oficina de Fechac que le corresponde, de acuerdo con la región donde desarrollará su proyecto y enviar una carta petición de financiamiento del mismo dirigida al Director  de Fechac para dicha zona (<a href="/pdf/solicitud/carta_peticion.doc" target="_blank">ejemplo de carta</a>)</li>
+              <li>Inicialmente deben entregarse por medios electrónicos el formato <a href="/pdf/solicitud/f15_formulacion_de_proyectos.xls" target="_blank">F15 Formulación del proyecto</a> y la <a href="/solicitud" target="_blank">F16 solicitud en línea.</a></li>
+              <li>Nuestro sistema de solicitud en línea le indicará la documentación que requiere presentar de acuerdo con el tipo de proyecto que presenta.</li>
+            </ul>
+          
+            </div>
+          </div>
+          <p class="q" data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">¿Cuál es el tiempo de respuesta aproximado?</p>
+          <div class="collapse" id="collapseExample3">
+            <div>
+              
+            <p>Los tiempos de respuesta pueden variar de acuerdo con cada proyecto. Para obtener una respuesta más adecuada, puede comunicarse con el ejecutivo de Fechac que esté a cargo de su solicitud.</p>
+          
+            </div>
+          </div>
+          <p class="q" data-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4">¿Fechac financia el total del costo de los proyectos?</p>
+          <div class="collapse" id="collapseExample4">
+            <div>
+            <p>Buscando generar sinergias e incentivar a las organizaciones para multiplicar su gestión de recursos, Fechac no apoya al 100% ningún proyecto.</p>
+                  <p>El tope máximo de participación, depende del tipo de proyecto, de la ubicación del mismo y de la institución que solicita el apoyo, así como de algunas otras características. Nuestro Sistema de solicitud en línea le proporcionará mayores datos al respecto conforme usted proporcione la información del proyecto.</p>
+          </div>
+          </div>
         </div>
       </div>
     </div>
@@ -99,6 +216,15 @@
 
   <footer>
     <div class="container">
+      <div class="paypal">
+        <p>¡Tu tienes el poder de cambiar vidas!</p>
+        <div class="row">
+            <input  class="inputDonar" type="text" placeholder="$CANTIDAD A DONAR">
+            <button class="btnDonar">Donar</button>
+            <img src="https://png.icons8.com/color/50/ffffff/paypal.png" alt="">
+        </div>
+        <p><small>Fundación del empresario Chihuahuenses, A. C.</small></p>
+      </div>
       <h3>Haz contacto, junyos poodemos ayudar.</h3>
       <div class="row">
         <div class="col-sm-12 col-lg-8">
@@ -166,8 +292,8 @@
     </div>
   </footer>
 
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.min.js"></script>  
   <script src="http://demo.tinywall.net/numscroller/numscroller-1.0.js"></script><!-- https://inorganik.github.io/countUp.js/ -->

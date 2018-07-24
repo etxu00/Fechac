@@ -7,8 +7,19 @@
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="manifest" href="site.webmanifest">
-<link rel="apple-touch-icon" href="icon.png">
+<link rel="apple-touch-icon" sizes="57x57" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="apple-touch-icon" sizes="60x60" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="apple-touch-icon" sizes="72x72" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="apple-touch-icon" sizes="76x76" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="apple-touch-icon" sizes="114x114" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="apple-touch-icon" sizes="120x120" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="apple-touch-icon" sizes="144x144" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="apple-touch-icon" sizes="152x152" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="icon" type="image/png" sizes="192x192"  href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="icon" type="image/png" sizes="96x96" href="http://www.fechac.org/web/img/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://www.fechac.org/web/img/favicon.ico">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 <!-- Place favicon.ico in the root directory -->
 
@@ -24,7 +35,7 @@
   <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
-  <header>
+  <header class="wow fadeInUp">
     <div class="container">
       <div class="row head">
         <div class="left">
@@ -49,10 +60,29 @@
           </form>
         </div>
       </div>
-      <nav class="itemsMenu">
+      <button class="btnOpenMenu open" type="button" onclick="this.classList.toggle('open');document.getElementById('menu').classList.toggle('open')">
+        <img class="open" src="https://png.icons8.com/metro/50/8a023c/menu.png">
+        <img class="close" src="https://png.icons8.com/ios/50/ffffff/delete-sign-filled.png">
+      </button>
+      <nav id="menu" class="itemsMenu">
         <ul>
-          <li class="item"><a href="#">Quines somos</a></li>
-          <li class="item"><a href="#">Proyectos</a></li>
+          <li class="item"><a href="#">Quienes somos</a></li>
+          <li class="item">
+            <a href="#">Proyectos</a>
+            <ul>
+              <li class="item"><a href="#">Camargo</a></li>
+              <li class="item"><a href="#">Chihuahua</a></li>
+              <li class="item"><a href="#">Cuauhtémoc</a></li>
+              <li class="item"><a href="#">Delicias</a></li>
+              <li class="item"><a href="#">Índole estatal</a></li>
+              <li class="item"><a href="#">Juárez</a></li>
+              <li class="item"><a href="#">Nvo. Casas Grandes</a></li>
+              <li class="item"><a href="#">Ojinaga</a></li>
+              <li class="item"><a href="#">Parral</a></li>
+              <li class="item"><a href="#">Zona serrana</a></li>
+              <li class="item"><a href="#">Proyectos</a></li>
+            </ul>
+          </li>
           <li class="item"><a href="#">Transparencia</a></li>
           <li class="item"><a href="#">Publicaciones</a></li>
           <li class="item"><a href="#">Apoyo a OSC</a></li>
@@ -73,7 +103,7 @@
   <section class="mosaic notEven">
     <div class="row">
       <div class="col-sm-12 col-lg-6 colCenter">
-        <h3>Caso de éxito</h3>
+        <h3 class="minText">Título del proyecto</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia omnis magnam quae, quas laboriosam sint et atque numquam adipisci nobis deserunt placeat, iste ullam fugiat temporibus nesciunt praesentium. Et, laborum.</p>
         <a href="#" class="btn">Conoce más</a>
       </div>
@@ -83,7 +113,7 @@
     </div>
     <div class="row">
       <div class="col-sm-12 col-lg-6 colCenter">
-        <h3>Caso de éxito</h3>
+        <h3 class="minText">Título del proyecto</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia omnis magnam quae, quas laboriosam sint et atque numquam adipisci nobis deserunt placeat, iste ullam fugiat temporibus nesciunt praesentium. Et, laborum.</p>
         <a href="#" class="btn">Conoce más</a>
       </div>
@@ -93,7 +123,7 @@
     </div>
     <div class="row">
       <div class="col-sm-12 col-lg-6 colCenter">
-        <h3>Caso de éxito</h3>
+        <h3 class="minText">Título del proyecto</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia omnis magnam quae, quas laboriosam sint et atque numquam adipisci nobis deserunt placeat, iste ullam fugiat temporibus nesciunt praesentium. Et, laborum.</p>
         <a href="#" class="btn">Conoce más</a>
       </div>
@@ -103,7 +133,7 @@
     </div>
     <div class="row">
       <div class="col-sm-12 col-lg-6 colCenter">
-        <h3>Caso de éxito</h3>
+        <h3 class="minText">Título del proyecto</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia omnis magnam quae, quas laboriosam sint et atque numquam adipisci nobis deserunt placeat, iste ullam fugiat temporibus nesciunt praesentium. Et, laborum.</p>
         <a href="#" class="btn">Conoce más</a>
       </div>
@@ -113,7 +143,7 @@
     </div>
     <div class="row">
       <div class="col-sm-12 col-lg-6 colCenter">
-        <h3>Caso de éxito</h3>
+        <h3 class="minText">Título del proyecto</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia omnis magnam quae, quas laboriosam sint et atque numquam adipisci nobis deserunt placeat, iste ullam fugiat temporibus nesciunt praesentium. Et, laborum.</p>
         <a href="#" class="btn">Conoce más</a>
       </div>
@@ -123,7 +153,7 @@
     </div>
     <div class="row">
       <div class="col-sm-12 col-lg-6 colCenter">
-        <h3>Caso de éxito</h3>
+        <h3 class="minText">Título del proyecto</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia omnis magnam quae, quas laboriosam sint et atque numquam adipisci nobis deserunt placeat, iste ullam fugiat temporibus nesciunt praesentium. Et, laborum.</p>
         <a href="#" class="btn">Conoce más</a>
       </div>
@@ -133,7 +163,7 @@
     </div>
     <div class="row">
       <div class="col-sm-12 col-lg-6 colCenter">
-        <h3>Caso de éxito</h3>
+        <h3 class="minText">Título del proyecto</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia omnis magnam quae, quas laboriosam sint et atque numquam adipisci nobis deserunt placeat, iste ullam fugiat temporibus nesciunt praesentium. Et, laborum.</p>
         <a href="#" class="btn">Conoce más</a>
       </div>
@@ -143,7 +173,7 @@
     </div>
     <div class="row">
       <div class="col-sm-12 col-lg-6 colCenter">
-        <h3>Caso de éxito</h3>
+        <h3 class="minText">Título del proyecto</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia omnis magnam quae, quas laboriosam sint et atque numquam adipisci nobis deserunt placeat, iste ullam fugiat temporibus nesciunt praesentium. Et, laborum.</p>
         <a href="#" class="btn">Conoce más</a>
       </div>
@@ -153,7 +183,7 @@
     </div>
     <div class="row">
       <div class="col-sm-12 col-lg-6 colCenter">
-        <h3>Caso de éxito</h3>
+        <h3 class="minText">Título del proyecto</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia omnis magnam quae, quas laboriosam sint et atque numquam adipisci nobis deserunt placeat, iste ullam fugiat temporibus nesciunt praesentium. Et, laborum.</p>
         <a href="#" class="btn">Conoce más</a>
       </div>
@@ -163,7 +193,7 @@
     </div>
     <div class="row">
       <div class="col-sm-12 col-lg-6 colCenter">
-        <h3>Caso de éxito</h3>
+        <h3 class="minText">Título del proyecto</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia omnis magnam quae, quas laboriosam sint et atque numquam adipisci nobis deserunt placeat, iste ullam fugiat temporibus nesciunt praesentium. Et, laborum.</p>
         <a href="#" class="btn">Conoce más</a>
       </div>
@@ -173,7 +203,7 @@
     </div>
     <div class="row">
       <div class="col-sm-12 col-lg-6 colCenter">
-        <h3>Caso de éxito</h3>
+        <h3 class="minText">Título del proyecto</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia omnis magnam quae, quas laboriosam sint et atque numquam adipisci nobis deserunt placeat, iste ullam fugiat temporibus nesciunt praesentium. Et, laborum.</p>
         <a href="#" class="btn">Conoce más</a>
       </div>
@@ -183,7 +213,7 @@
     </div>
     <div class="row">
       <div class="col-sm-12 col-lg-6 colCenter">
-        <h3>Caso de éxito</h3>
+        <h3 class="minText">Título del proyecto</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia omnis magnam quae, quas laboriosam sint et atque numquam adipisci nobis deserunt placeat, iste ullam fugiat temporibus nesciunt praesentium. Et, laborum.</p>
         <a href="#" class="btn">Conoce más</a>
       </div>
@@ -193,7 +223,7 @@
     </div>
     <div class="row">
       <div class="col-sm-12 col-lg-6 colCenter">
-        <h3>Caso de éxito</h3>
+        <h3 class="minText">Título del proyecto</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia omnis magnam quae, quas laboriosam sint et atque numquam adipisci nobis deserunt placeat, iste ullam fugiat temporibus nesciunt praesentium. Et, laborum.</p>
         <a href="#" class="btn">Conoce más</a>
       </div>
@@ -203,7 +233,7 @@
     </div>
     <div class="row">
       <div class="col-sm-12 col-lg-6 colCenter">
-        <h3>Caso de éxito</h3>
+        <h3 class="minText">Título del proyecto</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia omnis magnam quae, quas laboriosam sint et atque numquam adipisci nobis deserunt placeat, iste ullam fugiat temporibus nesciunt praesentium. Et, laborum.</p>
         <a href="#" class="btn">Conoce más</a>
       </div>
@@ -213,7 +243,7 @@
     </div>
     <div class="row">
       <div class="col-sm-12 col-lg-6 colCenter">
-        <h3>Caso de éxito</h3>
+        <h3 class="minText">Título del proyecto</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia omnis magnam quae, quas laboriosam sint et atque numquam adipisci nobis deserunt placeat, iste ullam fugiat temporibus nesciunt praesentium. Et, laborum.</p>
         <a href="#" class="btn">Conoce más</a>
       </div>
@@ -223,7 +253,7 @@
     </div>
     <div class="row">
       <div class="col-sm-12 col-lg-6 colCenter">
-        <h3>Caso de éxito</h3>
+        <h3 class="minText">Título del proyecto</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia omnis magnam quae, quas laboriosam sint et atque numquam adipisci nobis deserunt placeat, iste ullam fugiat temporibus nesciunt praesentium. Et, laborum.</p>
         <a href="#" class="btn">Conoce más</a>
       </div>
@@ -233,7 +263,7 @@
     </div>
     <div class="row">
       <div class="col-sm-12 col-lg-6 colCenter">
-        <h3>Caso de éxito</h3>
+        <h3 class="minText">Título del proyecto</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia omnis magnam quae, quas laboriosam sint et atque numquam adipisci nobis deserunt placeat, iste ullam fugiat temporibus nesciunt praesentium. Et, laborum.</p>
         <a href="#" class="btn">Conoce más</a>
       </div>
@@ -243,7 +273,7 @@
     </div>
     <div class="row">
       <div class="col-sm-12 col-lg-6 colCenter">
-        <h3>Caso de éxito</h3>
+        <h3 class="minText">Título del proyecto</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia omnis magnam quae, quas laboriosam sint et atque numquam adipisci nobis deserunt placeat, iste ullam fugiat temporibus nesciunt praesentium. Et, laborum.</p>
         <a href="#" class="btn">Conoce más</a>
       </div>
@@ -253,7 +283,7 @@
     </div>
     <div class="row">
       <div class="col-sm-12 col-lg-6 colCenter">
-        <h3>Caso de éxito</h3>
+        <h3 class="minText">Título del proyecto</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia omnis magnam quae, quas laboriosam sint et atque numquam adipisci nobis deserunt placeat, iste ullam fugiat temporibus nesciunt praesentium. Et, laborum.</p>
         <a href="#" class="btn">Conoce más</a>
       </div>
@@ -263,7 +293,7 @@
     </div>
     <div class="row">
       <div class="col-sm-12 col-lg-6 colCenter">
-        <h3>Caso de éxito</h3>
+        <h3 class="minText">Título del proyecto</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia omnis magnam quae, quas laboriosam sint et atque numquam adipisci nobis deserunt placeat, iste ullam fugiat temporibus nesciunt praesentium. Et, laborum.</p>
         <a href="#" class="btn">Conoce más</a>
       </div>
@@ -273,7 +303,7 @@
     </div>
     <div class="row">
       <div class="col-sm-12 col-lg-6 colCenter">
-        <h3>Caso de éxito</h3>
+        <h3 class="minText">Título del proyecto</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia omnis magnam quae, quas laboriosam sint et atque numquam adipisci nobis deserunt placeat, iste ullam fugiat temporibus nesciunt praesentium. Et, laborum.</p>
         <a href="#" class="btn">Conoce más</a>
       </div>
@@ -283,7 +313,7 @@
     </div>
     <div class="row">
       <div class="col-sm-12 col-lg-6 colCenter">
-        <h3>Caso de éxito</h3>
+        <h3 class="minText">Título del proyecto</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia omnis magnam quae, quas laboriosam sint et atque numquam adipisci nobis deserunt placeat, iste ullam fugiat temporibus nesciunt praesentium. Et, laborum.</p>
         <a href="#" class="btn">Conoce más</a>
       </div>
@@ -295,6 +325,15 @@
 
   <footer>
     <div class="container">
+      <div class="paypal">
+        <p>¡Tu tienes el poder de cambiar vidas!</p>
+        <div class="row">
+            <input  class="inputDonar" type="text" placeholder="$CANTIDAD A DONAR">
+            <button class="btnDonar">Donar</button>
+            <img src="https://png.icons8.com/color/50/ffffff/paypal.png" alt="">
+        </div>
+        <p><small>Fundación del empresario Chihuahuenses, A. C.</small></p>
+      </div>
       <h3>Haz contacto, junyos poodemos ayudar.</h3>
       <div class="row">
         <div class="col-sm-12 col-lg-8">

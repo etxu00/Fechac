@@ -2,6 +2,7 @@
   --fechac: #8a023c;
   --footer: #e2f9f3;
   --grey: #f6eff6;
+  --gradent: linear-gradient(to bottom, #a7344e 0%,#a2659e 100%);
   --text: #636363;
   --verde: #61d6bc;
 }
@@ -147,6 +148,10 @@ input {
     flex-direction: row-reverse;
   }
 }
+.mosaic {
+  max-width: 100%;
+  overflow: hidden; 
+}
 .mosaic > .row > div {
   padding: 0;
 }
@@ -156,8 +161,7 @@ input {
 header {
   background: white;
 }
-header 
-.itemsMenu .item {
+header .itemsMenu .item {
   color: var(--fechac);
   font-family: 'Catamaran', sans-serif;
   font-size: 24.5px;
@@ -165,7 +169,35 @@ header
   letter-spacing: -0.5px;
   line-height: 1;
   padding: 12px;
+  /*position: relative;*/
 }
+
+header .itemsMenu .item:hover ul {
+  display: flex;
+}
+header .itemsMenu .item ul {
+  position: absolute;
+  z-index: 2;
+  background: white;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1.5px solid;
+  color: var(--text);
+  min-width: 200px;
+  display: none;
+  width: 100%;
+  left: 0;
+  flex-wrap: wrap;
+}
+
+header .itemsMenu .item ul li.item {
+  font-size: 16px;
+  padding: 10px;
+  color: var(--texto);
+  width: calc(100% / 3);
+}
+
 a.btnDonar {
   background: linear-gradient(to bottom, #a7344e 0%,#a2659e 100%);
   color: white;
@@ -181,7 +213,21 @@ a.btnDonar {
 }
 header .container .media {
   position: relative;
+  display: flex;
+  align-items: flex-end;
 }
+
+nav.itemsMenu li:hover {
+  font-weight: 900;
+}
+
+nav.itemsMenu li a:hover {
+  text-decoration: none;
+}
+
+header .container .media {
+}
+
 .ct span {
   color: var(--fechac);
   font-size: 20px;
@@ -221,18 +267,36 @@ header .container {
 }
 .mosaic .colCenter p {
   font-size: 22px;
-  line-height: 2;
+  line-height: 1.5;
   text-align: center;
 }
 .mosaic .colCenter h3 {
-  font-size: 50px;
-  font-weight: 700;
+  font-size: 46px;
+  font-weight: 800;
   text-transform: uppercase;
 }
 .mosaic.notEven .row:nth-child(even) .colCenter h3,
 .mosaic .row:nth-child(odd) .colCenter h3 {
   color: white;
 }
+
+/*7px 22px pading home al final*/
+
+/*quienes somos
+h1, h2, h3, h4 {
+  text-align: left;
+  font-weight: 700;
+
+  p strong {
+      display: block;
+      margin-bottom: -20px;
+  }
+
+  ultimo h2
+      margin: 2rem 0;
+    text-align: center;
+}*/
+
 .colCenter {
   align-items: center;
   display: flex;
@@ -362,12 +426,14 @@ footer .btnDonar {
 }
 .sectionApoyo h2 {
   color: var(--text);
-  font-size: 4rem;
-  font-weight: 800;
+  font-size: 4rem !important;
+  font-weight: 800 !important;
 }
 
 section.sectionApoyo {
   padding: 2rem 0;
+  max-width: 100%;
+  overflow: hidden;
   text-align: center;
 }
 
@@ -375,13 +441,14 @@ section.sectionApoyo {
   font-size: 2rem;
   font-weight: 700;
 }
+/*900*/
 a.btn.fechac {
   border: 2px solid;
   color: var(--fechac);
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 22px;
+  font-weight: 900;
   line-height: 1;
-  padding: 1rem 2rem;
+  padding: 14px 20px;
   text-transform: uppercase;
 }
 a.btn.fechac.dona {
@@ -475,7 +542,7 @@ a.btn.fechac.dona {
 .slide .item{display:inline-block;position:relative;width:100%;}
 .slide .item .ctLeyend{-webkit-box-align:center;-moz-box-align:center;-o-box-align:center;-ms-flex-align:center;-webkit-align-items:center;align-items:center;display:-webkit-box;display:-moz-box;display:-webkit-flex;display:-ms-flexbox;display:box;display:flex;height:100%;-webkit-box-pack:center;-moz-box-pack:center;-o-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;left:0;position:absolute;top:0;width:100%;}
 .slide .item .ctLeyend .leyend{font-weight: 600;text-align:center;color:white;display:block;font-size:4rem;padding:1rem;white-space:normal;width:60%;line-height:1}
-.slide .item img{display:block;margin:0 auto;width:100%}
+.slide .item img{display:block;margin:0 auto;width:100%}/*1.3 p 1.*/
 .home1 {
   padding: 2rem -0px;
   text-align: center;
@@ -498,7 +565,7 @@ section.container.sponsor strong {
   font-weight: 800;
 }
 .owl-nav button {
-  background: url(https://png.icons8.com/ios/2000/ffffff/back.png) no-repeat center center !important;
+  background: url(img/arrow.svg) no-repeat center center !important;
   background-size: 150% 43% !important;
   width: 135px !important;
 }
@@ -506,7 +573,7 @@ section.container.sponsor strong {
   display: none;
 }
 
-button.owl-next {
+button.owl-prev {
   transform: rotate(180deg);
 }
 
@@ -569,10 +636,11 @@ section.transparencia {
 .left > div {
   text-align: left;
   margin: 0 0 0 10%;
-  font-weight: 600;
+  font-weight: 900;
 }
 .lineRight {
   border-right: 2px solid var(--fechac);
+  font-size: 18px;
 }
 .mb {
   margin-bottom: 2rem;
@@ -613,8 +681,9 @@ section.objetivosFideicomiso {
   color: white;
   padding: 1rem 1rem 2rem 1rem;
   text-align: left;
-  font-weight: 700;
-  font-size: 2rem;
+  font-weight: 900;
+  font-size: 26px;
+  text-transform: uppercase;
 }
 .panelNoticia ul.content {
   margin: 0;
@@ -675,7 +744,7 @@ section.objetivosFideicomiso {
 }
 
 .new p.balazo {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
 .new p.date {
@@ -821,7 +890,10 @@ form.orderNews select {
   display: block;
 }
 .container.homeProyecto h3 {
+  font-size: 20px;
+  font-weight: 900;
   text-align: left;
+  text-transform: uppercase;
 }
 .container.homeProyecto .row {
   margin: 3rem 0;
@@ -834,8 +906,30 @@ form.orderNews select {
   background: var(--fechac);
   margin: 4px 0;
 }
+/*PROYECTO HOME*/
+.container.homeProyecto .col-sm-12.col-lg-3:hover {
+    background: white;
+    border-radius: 3px;
+    box-shadow: 0 0 10px -1px #8a023c;
+    padding: 1rem;
+}
+
+.container.homeProyecto .col-sm-12.col-lg-3 {
+    padding: 1rem;
+}
+
+/*PROYECTO HOME*/
+/*PROYECTO zona*/
+.mosaic.notEven .row > .colCenter {
+  padding: 0 10rem !important;
+}
+
+.mosaic .colCenter h3 {
+ text-transform: initial; 
+}
+/*PROYECTO zona*/
 .container.homeProyecto {
-  background: url(https://images.vexels.com/media/users/3/148650/isolated/preview/17e90231c8db16d97810081b82f62682-mapa-del-estado-de-chihuahua-by-vexels.png) no-repeat center center;
+  background: url(img/global_ico_mapa.svg) no-repeat center center;
 }
 .home1 .p,
 .p {
@@ -901,4 +995,336 @@ h1.pp {
   top: 50%;
   width: 100%;
   z-index: -1;
+}
+.owl-carousel.owl-theme.owl2 {
+  text-align: center;
+}
+.owl-carousel.owl-theme.owl2 img {
+  padding: 1rem;
+}
+
+p.balazo {
+  font-size: 1.75rem;
+  margin: 13px 0 !important;
+}
+
+/*
+Objetivos del Fideicomiso
+font-weight: 600;
+    line-height: 1.25;
+    font-size: 19px;
+    padding: 0 5rem;*/
+button.btnOpenMenu {
+  display: none;
+}
+
+@media (max-width: 575.98px) {
+
+  p {
+      font-size: 1rem !important;
+      line-height: 1.43 !important;
+  }
+
+  footer h3 {
+      font-size: 2rem !important;
+      padding: 1rem 0;
+  }
+
+  .sectionApoyo h3 {
+      font-size: 1.45rem;
+      font-weight: 700;
+  }
+
+  .sectionApoyo h2 {
+      font-size: 2.5rem !important;
+      line-height: 1;
+  }
+    .itemsMenu.open {
+      transform: translateX(00%);
+    }
+    .itemsMenu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 4;
+      background: var(--fechac);
+      width: 100vw;
+      height: 100vh;
+      color: white;
+      transition: .3s linear;
+      max-height: 100vh;
+      overflow: auto;
+      transform: translateX(-100%);
+    }
+
+    .itemsMenu .item a {
+      display: block;
+      width: 100%;
+    }
+    .itemsMenu .item a:hover {
+      background: white;
+    }
+
+    .itemsMenu .item {
+      color: white !important;
+      width: 100%;
+    }
+
+    nav.itemsMenu ul {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 100%;
+    }
+
+    header .itemsMenu .item ul .item a {
+      color: var(--fechac);
+    }
+    header .itemsMenu .item ul {
+      position: relative;
+      width: 100%;
+    }
+    button.btnOpenMenu {
+      position: fixed;
+      z-index: 6;
+      top: 0;
+      right: 14px;
+      padding: 5px;
+      border: none;
+      background: transparent;
+      outline: none;
+      width: 38px;
+      height: 38px;
+      display: block;
+    }
+
+    button.btnOpenMenu.open img.close, button.btnOpenMenu img.open {
+      display: none;
+    }
+
+    button.btnOpenMenu.open img.open, button.btnOpenMenu img.close {
+      display: block;
+    }
+
+    button.btnOpenMenu img {
+      width: 100%;
+    }  
+
+    header row.head {
+        flex-direction: column;
+    }
+
+    header .right {
+        display: none;
+    }
+
+    header img.logo {
+        width: 120px;
+    }
+
+    header .ct {
+        display: none;
+    }
+
+    header .container .media {
+        margin: 0;
+    }
+    .slide .item .ctLeyend .leyend {
+        font-size: 16px;
+        padding: 0;
+    }
+
+    .owl-nav button {
+        width: 32px !important;
+    }
+
+    section.gb-dark *:not(h2) {
+        font-size: 26px !important;
+        border: none !important;
+    }
+
+    section.gb-dark h2 {
+        font-size: 39px;
+    }
+
+    section.sponsor a {
+        margin: 0 auto;
+        float: left;
+    }
+    .ctVideo:not(.play):before {
+        font-size: 16px;
+        width: 100%;
+        top: calc(100% - 10px);
+    }
+    .btn:not(:disabled):not(.disabled) {
+        cursor: pointer;
+        margin: 0 0 2rem 0;
+    }
+    section.gb-dark *:not(h2) {
+        font-size: 26px !important;
+        border: none !important;
+    }
+
+    section.gb-dark h2 {
+        font-size: 39px;
+    }
+
+    section.sponsor a {
+        margin: 0 auto;
+        float: left;
+    }
+
+    .ctVideo:not(.play):before {
+        font-size: 16px;
+        width: 100%;
+        top: calc(100% - 10px);
+    }
+
+    .ctVideo .center:before {
+        background: none;
+    }
+
+    footer * {
+        max-width: 100% !important;
+        margin: 0 auto 1rem auto !important;
+        font-size: 20px !important;
+    }
+
+    footer img {
+        max-width: 150px !important;
+    }
+
+    footer .colFooter {
+        padding: 0;
+    }
+
+    .home1 h2 {
+        font-size: 2rem;
+        font-weight: 300;
+        margin: 0 0 1rem 0;
+        line-height: 1.15;
+    }
+
+    .home1 p {
+        font-size: 1rem;
+        line-height: 1.43;
+        margin: 0 auto 2rem auto !important;
+        width: 100%;
+        text-align: center;
+    }
+}
+.ctVideo .center:before {
+    background: none;
+}
+
+.bgFechac {
+    background: var(--gradent);
+    padding: 2rem;
+    color: white !important;
+}
+
+.bgFechac h3 {
+    color: white;
+    text-align: left;
+    font-weight: 900;
+    margin-bottom: 5rem;
+}
+
+.bgFechac input {
+    background: transparent;
+    border: 2px solid white;
+    padding: 5px 10px;
+    margin: 0 0 1rem 0;
+}
+
+.bgFechac button {
+    background: var(--fechac);
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    margin: 1rem 0 0 0;
+}
+
+.bgFechac ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+}
+
+.bgFechac :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: red;
+}
+
+.bgFechac ::-ms-input-placeholder { /* Microsoft Edge */
+    color: red;
+}
+
+hr {
+  height: 2px;
+}
+.col-sm-12.col-lg-3.kk {
+    text-align: left;
+}
+
+.col-sm-12.col-lg-3.kk a {
+    display: block;
+    font-weight: 200;
+    opacity: .85;
+}
+
+.col-sm-12.col-lg-3.kk h5 {
+    font-size: 31px;
+    font-weight: 900;
+    padding-bottom: 5px;
+    border-bottom: 3px solid var(--fechac);
+}
+
+.slide.dark .item .slide .item:before {
+    background: transparent;
+}
+
+.slide.dark .slide .owl-nav .owl-prev {
+    transform: translateX(-100%);
+}
+
+.slide.dark .slide .owl-nav .owl-next {
+    transform: translateX(100%) rotate(-180deg);
+}
+
+.paypal {
+    max-width: 90&;
+    padding: 2rem 0 0 0;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--fechac);
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.paypal p small {
+    color: var(--text);
+}
+
+footer .paypal .btnDonar {
+    margin: 0 16px;
+    border: 2px solid white;
+}
+
+input.inputDonar {
+    background: white;
+    border-color: var(--fechac);
+    max-width: 238px;
+    margin: 0;
+}
+
+.paypal .row {
+    /*background: url(https://png.icons8.com/color/50/ffffff/paypal.png) no-repeat 100% 0;*/
+    justify-content: center;
+}
+
+.paypal img {
+    display: inline;
+    margin: 0;
 }
